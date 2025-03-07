@@ -78,9 +78,9 @@
                         <tr>
                             <td class="wrap"><?php echo $counter; ?></td>
                             <td class="wrap"><?php echo $row['gasto']; ?></td>
-                            <td class="wrap"><?php echo $row['monto']-($row['monto']*0.21); ?></td>
-                            <td class="wrap"><?php echo $row['monto']*0.21; ?></td>
-                            <td class="wrap"><?php echo $row['monto']; ?></td>
+                            <td class="wrap"><?php echo number_format($row['monto']-($row['monto']*0.21), 2,",",".").'$'; ?></td>
+                            <td class="wrap"><?php echo number_format($row['monto']*0.21, 2,",",".").'$'; ?></td>
+                            <td class="wrap"><?php echo number_format($row['monto'], 2,",",".").'$'; ?></td>
                         </tr>
     <?php
                 }
